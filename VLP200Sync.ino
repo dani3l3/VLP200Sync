@@ -34,7 +34,6 @@ void setup() {
   // pinMode(LED, OUTPUT);
 
   MIDI.begin(MIDI_CHANNEL_OMNI);
-  MIDI.turnThruOff();
   MIDI.setHandleStart(handleStart);
   MIDI.setHandleStop(handleStop);
 
@@ -61,6 +60,6 @@ void handleStop() {
 
 void sendShortPress() {
   digitalWrite(relayPin, HIGH);
-  delay(20);
+  delay(60);
   digitalWrite(relayPin, LOW);
 }
