@@ -25,14 +25,14 @@ So I started studying and building it using Arduino - albeit, in this case, a lo
 1. Arduino
 1. 1 Optocoupler 6N137
 1. 220 Ohm resistor
-1. 1 diode (anyone should be fine, I used a 1N914)
+1. 1 diode (any one should be fine, I used a 1N914 200mA 100V)
 1. 4.7K Ohm resistor
-1. 100nF capacitor (i.e. 104)
-1. relay [TODO detail relay module used]
-1. female MIDI mini TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box: I used the mini TRS because that was the same that was coming into the VLP200)
+1. 100nF capacitor (ceramic is fine i.e. 104)
+1. single relay module for Arduino KY019
+1. female MIDI mini 1/8' TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box: I used the mini TRS because that was the same that was coming into the VLP200)
 1. female MONO 1/4' jack (assuming you plug a male-to-male standard mono jack cable like those for pedals and guitars beween this device and into the CTRL port on the Valeton)
 
-PS: The schematics for the MIDI IN interface have been mostly derived from this forum post [TODO stackexchange link to answer]
+PS: The schematics for the MIDI IN interface have been mostly derived from [this forum post on stackexchange](https://arduino.stackexchange.com/questions/56279/how-do-i-properly-receive-midi-with-arduino-with-6n138/56281#56281)
 
 [TODO add parts for MIDI THRU and update schematics once ready]
 
