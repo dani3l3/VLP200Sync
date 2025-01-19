@@ -4,7 +4,7 @@ by Plank guitars and musical things by Shambien (Daniele Muscetta) - https://www
 
 - 2025 01 19 - v1.0 - initial version
 
-Tested with Arduino UNO (but will impement the device using a smaller/different board, it should make no difference, as you only really need one analog pin and the serial RX pin - plus VCC and ground, of course - for this to work)
+Tested on breadboard with Arduino UNO (but will impement the device/box using a smaller/different board, it should make no difference, as you only really need one analog pin and the serial RX pin - plus VCC and ground, of course - for this to work, so the smallest/cheapest Arduino clone you can find should work)
 
 
 ## What is it, what it does and why?
