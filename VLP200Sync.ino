@@ -4,7 +4,7 @@
 USed to solve a very specific shortcoming of the Valeton VLP200 pedal 
 so that we can use the CTRL PEDAL input on the VLP200 to START the drums when receiving a MIDI start message and stop them when we receive a stop message
 
-v.01 - initial beta
+- 2025 01 19 - v1.0 - initial version
 
 
 */
@@ -60,6 +60,6 @@ void handleStop() {
 
 void sendShortPress() {
   digitalWrite(relayPin, HIGH);
-  delay(60);
+  delay(60); // Arbitrary delay determined by trial and error: lower values at times were not long enough; this appears to work reliably with my pedal and my relay.
   digitalWrite(relayPin, LOW);
 }
