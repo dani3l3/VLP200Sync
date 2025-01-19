@@ -32,7 +32,7 @@ So I started studying and building it using Arduino - albeit, in this case, a lo
 1. female MIDI mini 1/8' TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box: I used the mini TRS because that was the same that was coming into the VLP200)
 1. female MONO 1/4' jack (assuming you plug a male-to-male standard mono jack cable like those for pedals and guitars beween this device and into the CTRL port on the Valeton)
 
-PS: The schematics for the MIDI IN interface have been mostly derived from [this forum post on stackexchange](https://arduino.stackexchange.com/questions/56279/how-do-i-properly-receive-midi-with-arduino-with-6n138/56281#56281)
+PS: The schematics for the MIDI IN interface have been mostly derived from [this forum post on stackexchange](https://arduino.stackexchange.com/questions/56279/how-do-i-properly-receive-midi-with-arduino-with-6n138/66746#66746)
 
 [TODO add parts for MIDI THRU and update schematics once ready]
 
