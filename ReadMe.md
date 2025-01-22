@@ -21,6 +21,10 @@ So I came up with the idea: I can build a small (additional) device/box that tak
 With this in mind, I started studying and building it using Arduino - albeit, in this case, a lot of the circuitry is just for a MIDI IN interface (and I am working to expand that to also spit out the same signal as MIDI THRU [TODO update schematics and this text when ready] so that it can be used in 'daisy chain' fashion without a MIDI THRU box) and the Arduino part is really really simple and straightforward and just serves as 'glue'.
 
 
+I have posted / you can also watch [a video I posted on my YouTube channel](https://www.youtube.com/watch?v=WXSRCrPKFr0) in which I am explaining / walking thru the project.
+
+
+
 ## Hardware
 
 1. Arduino
@@ -33,11 +37,11 @@ With this in mind, I started studying and building it using Arduino - albeit, in
 1. female MIDI mini 1/8' TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box: I used the mini TRS because that was the same that was coming into the VLP200)
 1. female MONO 1/4' jack (assuming you plug a male-to-male standard mono jack cable like those for pedals and guitars beween this device and into the CTRL port on the Valeton)
 
+### Schematics
 
 <img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/circuit-MIDI-IN.jpg?raw=true" alt="MIDI IN circuit" width="250">
 
 <img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/circuit-RELAY.jpg?raw=true" alt="RELAY" width="250">
-
 
 PS: The schematics for the MIDI IN interface have been mostly derived from [this forum post on stackexchange](https://arduino.stackexchange.com/questions/56279/how-do-i-properly-receive-midi-with-arduino-with-6n138/66746#66746)
 
@@ -49,6 +53,8 @@ PS: The schematics for the MIDI IN interface have been mostly derived from [this
 The code is really short and simple and it includes a lot of comments and it should be easy to figure out what to tweak (there is one delay for how long the relay keeps the circuit closed before re-opening it, simulating the momentary button press and a couple of instructions commented out that can be enabled to debug if the MIDI information is arriving to the Arduino - on boards such as Arduino UNO that have a special internal LED on pin 13 that can be turned on, since it's difficult to troubleshoot MIDI interfaces on some arduino's because the serial RX bus is shared with the USB connection - also making it impossible to upload projects to the board WHILE MIDI data is being received, which is kind of annoying).
 
 Besides the code, in this repository you will find [some pictures I took during various phases of the build process and the circuit diagram I used](./img/).
+
+
 
 
 
