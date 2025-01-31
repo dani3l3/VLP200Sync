@@ -18,34 +18,37 @@ After analyzing the available options, I realized that the VLP200 has also anoth
 
 So I came up with the idea: I can build a small (additional) device/box that takes the same MIDI input (which has to be sent both to the VLP200 for MIDI clock AND to this additional box, from a MIDI thru box - or implementing the MIDI thru on this new device) and can process the START and STOP messages and 'emulate' the behaviour of a CTRL pedal with a relay. Basically, from the same MIDI signal in the chain, the VLP200 would only consume MIDI clock and adjust tempo/BPM accordingly, while this additional box would react to START and STOP messages and start it, giving me the missing functionality.
 
-With this in mind, I started studying and building it using Arduino - albeit, in this case, a lot of the circuitry is just for a MIDI IN interface (and I am working to expand that to also spit out the same signal as MIDI THRU [TODO update schematics and this text when ready] so that it can be used in 'daisy chain' fashion without a MIDI THRU box) and the Arduino part is really really simple and straightforward and just serves as 'glue'.
+With this in mind, I started studying and building it using Arduino - albeit, in this case, a lot of the circuitry is just for a MIDI IN interface and also spits out the same signal as MIDI THRU so that it can be used in 'daisy chain' fashion without a MIDI THRU box) and the Arduino part is really really simple and straightforward and just serves as 'glue' (= triggering the relay to simulate the button press on receiving MIDI START and STOP messages).
 
 
 I have posted / you can also watch [a video I posted on my YouTube channel](https://www.youtube.com/watch?v=WXSRCrPKFr0) in which I am explaining / walking thru the project.
 
+<img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/photo_work-in-progress-05-FIRST-TEST.jpg?raw=true" alt="VLP200Sync connected to VLP200 and to sequencer (first test)" width="250">
 
 
 ## Hardware
 
 1. Arduino
 1. 1 Optocoupler 6N137
-1. 220 Ohm resistor
+1. 3 x 220 Ohm resistor(s)
 1. 1 diode (any one should be fine, I used a 1N914 200mA 100V)
 1. 4.7K Ohm resistor
 1. 100nF capacitor (ceramic is fine i.e. 104)
 1. single relay module for Arduino KY019
-1. female MIDI mini 1/8' TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box: I used the mini TRS because that was the same that was coming into the VLP200)
+1. 2 x female MIDI mini 1/8' TRS jack OR DIN 5pins connector for MIDI IN (depending on what cable you use to deliver the MIDI signal to this box and what connector your prefer for the MIDI THRU: I used the mini TRS because that was the same that was coming into the VLP200)
 1. female MONO 1/4' jack (assuming you plug a male-to-male standard mono jack cable like those for pedals and guitars beween this device and into the CTRL port on the Valeton)
+1. 74HC14 logic gate
+
 
 ### Schematics
 
 <img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/circuit-MIDI-IN.jpg?raw=true" alt="MIDI IN circuit" width="250">
 
+<img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/circuit-MIDI-THRU.jpg?raw=true" alt="MIDI THRU circuit" width="250">
+
 <img src="https://github.com/dani3l3/VLP200Sync/blob/master/img/circuit-RELAY.jpg?raw=true" alt="RELAY" width="250">
 
 PS: The schematics for the MIDI IN interface have been mostly derived from [this forum post on stackexchange](https://arduino.stackexchange.com/questions/56279/how-do-i-properly-receive-midi-with-arduino-with-6n138/66746#66746)
-
-[TODO add parts for MIDI THRU and update schematics once ready]
 
 
 
